@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Desktop */
+@media screen and (min-width: 750px) {
+.landing-page{
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 500px 400px 200px 200px;
+    grid-template-areas: 
+    "videos"
+    "podcast"
+    "news-letter"
+    "institucional";
+    grid-column-gap: 20px;
+    align-items: center;
+    }
+.landing-page .landing-page__video{
+    grid-area: videos;
+    width: 500px;
+    height: 500px;
+    justify-self: center;
+    }
+.landing-page .landing-page__podcast{
+    grid-area: podcast;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 200px 200px;
+    grid-template-areas: 
+    "titulo titulo"
+    "podcast-1 podcast-2"
+    "podcast-3 podcast-4";
+    grid-column-gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    }
+.landing-page__podcast h1{
+    grid-area: titulo;
+    justify-self: center;
+    text-align: center;
+    }
+.landing-page__podcast .pod__1{
+    grid-area: podcast-1;
+    justify-content: space-between;
+    height: 200px;
+}
+.landing-page__podcast .pod__2{
+    grid-area: podcast-2;
+    justify-content: space-between;
+    height: 200px;
+}
+.landing-page__podcast .pod__3{
+    grid-area: podcast-3;
+    justify-content: space-between;
+    height: 200px;
+}
+.landing-page__podcast .pod__4{
+    grid-area: podcast-4;
+    justify-content: space-between;
+    height: 200px;
+}
+.landing-page__news-letter{
+    grid-area: news-letter;
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 100px 30px 30px 30px;
+    grid-template-areas: 
+    "nl-titulo"
+    "nl-nome"
+    "nl-email"
+    "nl-botao";
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-self: center;
+    }
+.landing-page__news-letter h1{
+    grid-area: nl-titulo;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    }
+.landing-page__news-letter h2{
+    grid-area: nl-titulo;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    }
+
+.landing-page__news-letter input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;   
+    text-align: center;
+    }
+    
+.main__nome{
+    grid-area: nl-nome;
+    justify-self: center;
+    width: 300px;
+    }
+    
+.main__email{
+    grid-area: nl-email;
+    justify-self: center;
+    width: 300px;
+    }
+    
+.main__botao{
+    grid-area: nl-botao;
+    justify-self: center;
+    cursor: pointer;
+    width: 150px;
+    }
+.main__botao:hover{
+    background-color: black;
+    color: white;
+    }
+
+
+
+
+
+
+}
