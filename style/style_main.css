@@ -3,12 +3,10 @@
     margin: 0;
     padding: 0;
 }
-/* Desktop */
-@media screen and (min-width: 750px) {
 .landing-page{
     display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 500px 400px 200px 200px;
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 500px 200px 500px;
     grid-template-areas: 
     "videos"
     "podcast"
@@ -22,6 +20,14 @@
     width: 500px;
     height: 500px;
     justify-self: center;
+    }
+.landing-page .landing-page__video h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
     }
 .landing-page .landing-page__podcast{
     grid-area: podcast;
@@ -41,59 +47,92 @@
     text-align: center;
     font-weight: bold;
     }
-.landing-page__podcast h1{
+.landing-page .landing-page__podcast h1{
     grid-area: titulo;
     justify-self: center;
     text-align: center;
     }
-.landing-page__podcast .pod__1{
+.landing-page .landing-page__podcast .pod__1{
     grid-area: podcast-1;
     justify-content: space-between;
     height: 200px;
+    margin-top: 30px;
 }
-.landing-page__podcast .pod__2{
+.landing-page .landing-page__podcast .pod__2{
     grid-area: podcast-2;
     justify-content: space-between;
     height: 200px;
+    margin-top: 30px;
 }
-.landing-page__podcast .pod__3{
+.landing-page .landing-page__podcast .pod__3{
     grid-area: podcast-3;
     justify-content: space-between;
     height: 200px;
 }
-.landing-page__podcast .pod__4{
+.landing-page .landing-page__podcast .pod__4{
     grid-area: podcast-4;
     justify-content: space-between;
     height: 200px;
 }
-.landing-page__news-letter{
+.landing-page .landing-page__news-letter{
     grid-area: news-letter;
+    justify-self: center;
     display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 100px 30px 30px 30px;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 30px 50px 50px 50px;
     grid-template-areas: 
-    "nl-titulo"
-    "nl-nome"
-    "nl-email"
-    "nl-botao";
+    "nltitulo"
+    "nlsubtitulo"
+    "nlnome"
+    "nlemail"
+    "nlbotao";
     grid-column-gap: 20px;
     align-items: center;
-    justify-self: center;
+    justify-items: center;
+    align-content: space-between;
+    justify-content: center;
     }
-.landing-page__news-letter h1{
-    grid-area: nl-titulo;
+.landing-page .landing-page__news-letter h1{
+    grid-area: nltitulo;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
-    text-align: center;
+    justify-self: center;
+    align-self: center;
     }
-.landing-page__news-letter h2{
-    grid-area: nl-titulo;
+.landing-page .landing-page__news-letter h2{
+    grid-area: nlsubtitulo;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-    text-align: center;
+    justify-self: center;
+    align-self: center;
+    }   
+.landing-page .landing-page__news-letter .landing-page__news-letter__nome{
+    grid-area: nlnome;
+    width: 250px;
+    margin-top: 10px;
+    justify-self: center;
+    align-self: center;
     }
-
-.landing-page__news-letter input{
+.landing-page .landing-page__news-letter .landing-page__news-letter__email{
+    grid-area: nlemail;
+    width: 250px;
+    margin-top: 10px;
+    justify-self: center;
+    align-self: center;
+    }
+.landing-page .landing-page__news-letter .landing-page__news-letter__botao{
+    grid-area: nlbotao;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 10px;
+    justify-self: center;
+    align-self: center;
+    }
+.landing-page .landing-page__news-letter .landing-page__news-letter__botao:hover{
+    background-color: black;
+    color: white;
+    }
+.landing-page .landing-page__news-letter input{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     font-size: 20px;
@@ -101,33 +140,3 @@
     border-radius: 20px;   
     text-align: center;
     }
-    
-.main__nome{
-    grid-area: nl-nome;
-    justify-self: center;
-    width: 300px;
-    }
-    
-.main__email{
-    grid-area: nl-email;
-    justify-self: center;
-    width: 300px;
-    }
-    
-.main__botao{
-    grid-area: nl-botao;
-    justify-self: center;
-    cursor: pointer;
-    width: 150px;
-    }
-.main__botao:hover{
-    background-color: black;
-    color: white;
-    }
-
-
-
-
-
-
-}
